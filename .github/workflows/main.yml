@@ -13,4 +13,4 @@ jobs:
       with:
         server: ftp.124.43.19.242:8081
         username: demoaccount
-        password: ${{ secrets.prod_FTP_PASSWORD }}
+        password: ${{ secrets.Demo@RH#208 }}
