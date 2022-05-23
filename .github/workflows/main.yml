@@ -1,16 +1,16 @@
 on: push
-name: Production Deploy
+name: Deploy website on push
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  web-deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
+    - name: Get latest code
+      uses: actions/checkout@v2
+    
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ftp://192.168.0.21
-        ftp-username: demoaccount
-        ftp-password: ${{ secrets.Demo@RH#2081 }}
+        server: ftp.mywedding22.000webhostapp.com
+        username: mywedding22
+        password: ${{ secrets.pkm@123456789 }}
